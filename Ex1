@@ -1,0 +1,35 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
+ */
+package ex1;
+
+/**
+ *
+ * @author LOWCOST
+ */
+public class EX1 {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        // TODO code application logic here
+           // Testando o construtor
+        Author author = new Author("Wellington Tuler", "tulermoraes@yahoo.com", 'm');
+        
+        // Verificando o método toString()
+        System.out.println("Testando toString(): " + author.toString());
+        // Saída esperada: Author[name=Wellington Tuler,email=tulermoraes@yahoo.com,gender=m]
+        
+        // Testando os Getters
+        System.out.println("Nome: " + author.getName()); // Esperado: Wellington Tuler
+        System.out.println("Email: " + author.getEmail()); // Esperado: tulermoraes@yahoo.com
+        System.out.println("Gênero: " + author.getGender()); // Esperado: m
+        
+        // Testando o Setter para email
+        author.setEmail("novoemail@exemplo.com");
+        System.out.println("Novo Email: " + author.getEmail()); // Esperado: novoemail@exemplo.com
+    }
+    
+}
