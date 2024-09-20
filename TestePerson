@@ -1,0 +1,27 @@
+public class TestPerson {
+    public static void main(String[] args) {
+        // Testando a classe Person
+        Person person = new Person("João Silva", "Rua Principal, 123");
+        System.out.println(person); // Saída esperada: Person[name=João Silva,address=Rua Principal, 123]
+        person.setAddress("Rua Secundária, 456");
+        System.out.println("Novo endereço: " + person.getAddress()); // Saída esperada: Rua Secundária, 456
+
+        // Testando a classe Student
+        Student student = new Student("Maria Souza", "Rua A, 100", "Engenharia", 2024, 1500.50);
+        System.out.println(student); // Saída esperada: Student[Person[name=Maria Souza,address=Rua A, 100],program=Engenharia,year=2024,fee=1500.5]
+        student.setProgram("Computação");
+        student.setYear(2025);
+        student.setFee(2000.75);
+        System.out.println("Novo programa: " + student.getProgram()); // Esperado: Computação
+        System.out.println("Novo ano: " + student.getYear()); // Esperado: 2025
+        System.out.println("Nova taxa: " + student.getFee()); // Esperado: 2000.75
+
+        // Testando a classe Staff
+        Staff staff = new Staff("Carlos Pereira", "Avenida Central, 789", "Escola ABC", 3500.00);
+        System.out.println(staff); // Saída esperada: Staff[Person[name=Carlos Pereira,address=Avenida Central, 789],school=Escola ABC,pay=3500.0]
+        staff.setSchool("Escola XYZ");
+        staff.setPay(4000.00);
+        System.out.println("Nova escola: " + staff.getSchool()); // Esperado: Escola XYZ
+        System.out.println("Novo pagamento: " + staff.getPay()); // Esperado: 4000.0
+    }
+}
