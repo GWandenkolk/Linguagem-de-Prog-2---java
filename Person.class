@@ -1,0 +1,31 @@
+public class Person {
+    // Atributos privados
+    private String name;
+    private String address;
+
+    // Construtor para inicializar os atributos
+    public Person(String name, String address) {
+        this.name = name;
+        this.address = address;
+    }
+
+    // Getters
+    public String getName() {
+        return name;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    // Setter
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+    // Método toString()
+    @Override
+    public String toString() {
+        return "Person[name=" + name + ",address=" + address + "]";
+    }
+}
