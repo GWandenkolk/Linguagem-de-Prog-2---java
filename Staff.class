@@ -1,0 +1,35 @@
+public class Staff extends Person {
+    // Atributos específicos de Staff
+    private String school;
+    private double pay;
+
+    // Construtor para inicializar os atributos
+    public Staff(String name, String address, String school, double pay) {
+        super(name, address); // Chama o construtor da classe base (Person)
+        this.school = school;
+        this.pay = pay;
+    }
+
+    // Getters e Setters
+    public String getSchool() {
+        return school;
+    }
+
+    public void setSchool(String school) {
+        this.school = school;
+    }
+
+    public double getPay() {
+        return pay;
+    }
+
+    public void setPay(double pay) {
+        this.pay = pay;
+    }
+
+    // Método toString()
+    @Override
+    public String toString() {
+        return "Staff[" + super.toString() + ",school=" + school + ",pay=" + pay + "]";
+    }
+}
