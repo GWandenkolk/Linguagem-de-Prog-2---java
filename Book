@@ -1,0 +1,57 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package ex2;
+
+/**
+ *
+ * @author LOWCOST
+ */
+public class Book {
+    
+    // Atributos privados
+    private String name;
+    private Author[] authors; // Array de autores
+    private double price;
+    private int qty; // Quantidade em estoque
+
+    // Construtor que recebe um array de autores
+    public Book(String name, Author[] authors, double price, int qty) {
+        this.name = name;
+        this.authors = authors.clone(); // Clonando para evitar alterações externas
+        this.price = price;
+        this.qty = qty; 
+    }
+
+    // Métodos públicos
+    public String getName() {
+        return name;
+    }
+
+    public Author[] getAuthors() {
+        return authors.clone(); // Retorna uma cópia para evitar modificações externas
+    }
+
+    public double getPrice() {
+        return price;
+    }
+
+    public int getQty() {
+        return qty;
+    }
+
+    // Método toString()
+    @Override
+    public String toString() {
+        StringBuilder authorsStr = new StringBuilder();
+        for (int i = 0; i < authors.length; i++) {
+            authorsStr.append(authors[i].toString());
+            if (i < authors.length - 1) {
+                authorsStr.append(", ");
+            }
+        }
+        return "Book[name=" + name + ", authors={" + authorsStr.toString() + "}, price=" + price + ", qty=" + qty + "]";
+    }
+}
+
